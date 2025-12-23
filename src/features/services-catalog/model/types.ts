@@ -4,7 +4,4 @@ export type Service = {
     price: number;
 };
 
-export type ServiceCardProps = {
-    service: Service;
-    onAdd: (serviceId: string) => void;
-}
+export type AddServiceHandler = (serviceId: string) => void;
