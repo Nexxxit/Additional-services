@@ -18,10 +18,10 @@ export default function ServiceCard({
     <article className={"card"}>
       <div className={"card-info"}>
         <h3 className={"card-title"}>{service.title}</h3>
-        <p className={"card-price"}>{service.price} руб.</p>
+        <p className={"card-price"}>{service.price} ₽</p>
       </div>
       <Button
-        className={`btn-service size-15 p-2 rounded-md  ${isSelected ? "btn-service--add" : "btn-service--remove"}`}
+        className={`btn-service ${isSelected ? "btn-service--remove" : "btn-service--add"}`}
         onClick={() => onToggle(service.id)}
       >
         {isSelected ? <CheckIcon /> : <PlusIcon />}

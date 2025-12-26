@@ -14,7 +14,11 @@ export default function ServiceList({
 }: ServiceListProps) {
   return (
     <section>
-      <ul className={"flex flex-col gap-1"}>
+      <ul
+        className={
+          "flex flex-col gap-1 max-h-[60vh] sm:max-h-128 overflow-y-auto pr-1"
+        }
+      >
         {services.map((service) => {
           const selected = selectedIds.includes(service.id);
           return (
