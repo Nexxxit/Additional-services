@@ -2,29 +2,41 @@
 
 @layer components {
     .btn-service {
-        @apply inline-flex items-center justify-center gap-2 min-h-10 px-3 py-2 rounded-lg text-sm font-semibold transition-colors;
+        @apply inline-flex items-center justify-center size-12 min-h-10 px-3 py-2 rounded-lg text-sm shrink-0 font-semibold transition-colors sm:size-15;
         @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
     }
     .btn-service--add {
-        @apply bg-sky-600 text-white hover:bg-sky-700;
+        @apply bg-sky-600 text-white hover:bg-sky-700 active:bg-sky-800;
     }
     .btn-service--remove {
-        @apply bg-white text-sky-700 border border-sky-200 hover:bg-sky-50 ring-sky-600;
+        @apply bg-white text-sky-700 border border-sky-200 hover:bg-sky-50 active:bg-sky-100 ring-sky-600;
     }
 
     .card {
-        @apply flex justify-between items-center px-4 py-2 bg-zinc-100 border border-zinc-400 rounded-xl shadow-md max-w-md
+        @apply flex justify-between items-center gap-3 px-4 py-2 bg-zinc-100 border border-zinc-400 rounded-xl shadow-md
     }
 
     .card-info {
-        @apply flex flex-col gap-4
+        @apply flex flex-col gap-4 min-w-0
     }
 
     .card-title {
-        @apply font-bold text-2xl text-blue-500
+        @apply font-bold text-lg text-blue-500 wrap-anywhere sm:text-xl
     }
 
     .card-price {
         @apply text-xl
+    }
+
+    .btn-cart {
+        @apply inline-flex items-center justify-center border rounded-lg px-3 py-2 size-10 gap-2 min-h-10 font-semibold transition-colors;
+    }
+
+    .btn-cart--remove {
+        @apply bg-neutral-400 text-white hover:bg-neutral-500 active:bg-neutral-600;
+    }
+
+    .btn-apply {
+        @apply w-full max-w-sm rounded-lg bg-sky-600 px-4 py-3 text-sm font-semibold text-white hover:bg-sky-700 active:bg-sky-800;
     }
 }
